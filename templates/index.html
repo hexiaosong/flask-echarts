@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>企业大数据监控平台</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/map.css') }}">
+</head>
+<body>
+<div class="data">
+
+    <div class="data-title">
+        <div class="title-left fl"></div>
+        <div class="title-center fl"></div>
+        <div class="title-right fr"></div>
+    </div>
+    <div class="data-content">
+        <div class="con-left fl">
+            <div class="left-top">
+                <div class="info">
+                    <div class="info-title">实时统计</div>
+                    <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                    <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                    <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                    <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                    <div class="info-main">
+                        <div class="info-1">
+                            <div class="info-img fl">
+                                <img src="{{ url_for('static',filename='img/info-img-1.png') }}" alt="">
+                            </div>
+                            <div class="info-text fl">
+                                <p>有效cookie数量</p>
+                                <p>1257</p>
+                            </div>
+                        </div>
+                        <div class="info-2">
+                            <div class="info-img fl">
+                                <img src="{{ url_for('static',filename='img/info-img-2.png') }}" alt="">
+                            </div>
+                            <div class="info-text fl">
+                                <p>新增企业数</p>
+                                <p>157</p>
+                            </div>
+                        </div>
+                        <div class="info-3">
+                            <div class="info-img fl">
+                                <img src="{{ url_for('static',filename='img/info-img-3.png') }}" alt="">
+                            </div>
+                            <div class="info-text fl">
+                                <p>活跃机器数(台)</p>
+                                <p>25</p>
+                            </div>
+                        </div>
+                        <div class="info-4">
+                            <div class="info-img fl">
+                                <img src="{{ url_for('static',filename='img/info-img-4.png') }}" alt="">
+                            </div>
+                            <div class="info-text fl">
+                                <p>今日活跃率(%)</p>
+                                <p>83</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-bottom">
+                    <div class="title">行业统计</div>
+                    <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                    <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                    <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                    <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                    <div id="echarts_1" class="charts"></div>
+                </div>
+            </div>
+            <div class="left-bottom">
+                <div class="title">各模块数据抓取统计</div>
+                <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                <div id="echarts_2" class="charts"></div>
+            </div>
+        </div>
+        <div class="con-center fl">
+            <div class="map-num">
+                <p>实时数据抓取总量</p>
+                <div class="num">
+                    <span>1</span>
+                    <span>,</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>,</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                </div>
+            </div>
+            <div class="cen-top" id="map"></div>
+            <div class="cen-bottom">
+                <div class="title">昨日抓取数量统计</div>
+                <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                <div id="echarts_3" class="charts"></div>
+            </div>
+        </div>
+        <div class="con-right fr">
+            <div class="right-top">
+                <div class="title">各模块队列剩余带抓取数量统计</div>
+                <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                <div id="echarts_4" class="charts"></div>
+            </div>
+            <div class="right-center">
+                <div class="title">各服务器抓取数量TOP5</div>
+                <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                <div id="echarts_5" class="charts"></div>
+            </div>
+            <div class="right-bottom">
+                <div class="title">服务器消费cookie数TOP5</div>
+                <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
+                <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
+                <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
+                <img src="{{ url_for('static',filename='img/bj-4.png') }}" alt="" class="bj-4">
+                <div id="echarts_6" class="charts"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="{{ url_for('static',filename='js/jquery-2.1.1.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/echarts.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/china.js') }}"></script>
+<script src="{{ url_for('static',filename='js/echarts.js') }}"></script>
+<script src="{{ url_for('static',filename='js/echarts1.js') }}"></script>
+</html>
