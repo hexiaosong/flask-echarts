@@ -30,7 +30,7 @@
                             </div>
                             <div class="info-text fl">
                                 <p>有效cookie数量</p>
-                                <p>1257</p>
+                                <p id="cookie-number"></p>
                             </div>
                         </div>
                         <div class="info-2">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="info-text fl">
                                 <p>新增企业数</p>
-                                <p>157</p>
+                                <p>340万</p>
                             </div>
                         </div>
                         <div class="info-3">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="top-bottom">
-                    <div class="title">行业统计</div>
+                    <div class="title">类别统计</div>
                     <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
                     <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
                     <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
@@ -82,12 +82,12 @@
         </div>
         <div class="con-center fl">
             <div class="map-num">
-                <p>实时数据抓取总量</p>
+                <p>数据抓取总量</p>
                 <div class="num">
                     <span>1</span>
                     <span>,</span>
-                    <span>2</span>
-                    <span>3</span>
+                    <span>0</span>
+                    <span>0</span>
                     <span>4</span>
                     <span>,</span>
                     <span>5</span>
@@ -97,7 +97,7 @@
             </div>
             <div class="cen-top" id="map"></div>
             <div class="cen-bottom">
-                <div class="title">昨日抓取数量统计</div>
+                <div class="title">今日抓取数量统计</div>
                 <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
                 <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
                 <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
@@ -140,4 +140,5 @@
 <script src="{{ url_for('static',filename='js/china.js') }}"></script>
 <script src="{{ url_for('static',filename='js/echarts.js') }}"></script>
 <script src="{{ url_for('static',filename='js/echarts1.js') }}"></script>
+<script src="{{ url_for('static',filename='js/echarts_number.js') }}"></script>
 </html>

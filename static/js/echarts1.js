@@ -11,7 +11,7 @@ $(document).ready(function(){
                 trigger: 'item',
                 formatter: "{b}: <br/>{c} ({d}%)"
             },
-            color: ['#af89d6', '#4ac7f5', '#0089ff', '#f36f8a', '#f5c847'],
+            color: ['#af89d6', '#4ac7f5'],
             legend: { //图例组件，颜色和名字
                 x: '70%',
                 y: 'center',
@@ -20,7 +20,7 @@ $(document).ready(function(){
                 itemWidth: 10,
                 itemHeight: 10,
                 icon: 'rect',
-                data: ['行业一', '行业二', '行业三', '行业四', '行业五'],
+                data: ['name2url', '关联关系'],
                 textStyle: {
                     color: [],
                     fontStyle: 'normal',

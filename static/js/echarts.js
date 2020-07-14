@@ -190,10 +190,11 @@ $(function () {
             geoCoordMap[name] = v.properties.cp;
         });
 
-        data = [{"name":"重庆", "value":50}, {"name":"贵州", "value":40}, {"name":"四川", "value":60}]
-        toolTipData = [{"name":"重庆", "value":[{"name":"数量", "value":250101}]},
-                       {"name":"四川", "value":[{"name":"数量", "value":500101}]},
-                       {"name":"贵州", "value":[{"name":"数量", "value":350001}]},
+        data = [{"name":"重庆", "value":50}, {"name":"贵州", "value":40}, {"name":"四川", "value":60}, {"name":"湖北", "value":55}]
+        toolTipData = [{"name":"重庆", "value":[{"name":"企业数量", "value":'252万'}]},
+                       {"name":"四川", "value":[{"name":"企业数量", "value":'500万'}]},
+                       {"name":"贵州", "value":[{"name":"企业数量", "value":'250万'}]},
+                       {"name":"湖北", "value":[{"name":"企业数量", "value":'340万'}]},
         ]
         var max = 480,
             min = 9; // todo
@@ -562,7 +563,7 @@ $(function () {
                     itemStyle: {
                         normal: {areaStyle: {type: 'default'}}
                     },
-                    data:[710, 312, 321,754, 500, 830, 710, 521, 504, 660, 530, 410,710, 312, 321,754, 500, 830, 710, 521, 504, 660, 530, 410]
+                    data:[710, 312, 321,754, 500, 830, 710, 521, 504, 660, 530, 410,710, 312, 321,754, 500, 830, 0, 0, 0, 0, 0, 0]
                 }
             ]
         };
