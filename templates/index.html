@@ -38,8 +38,8 @@
                                 <img src="{{ url_for('static',filename='img/info-img-2.png') }}" alt="">
                             </div>
                             <div class="info-text fl">
-                                <p>新增企业数</p>
-                                <p>340万</p>
+                                <p>失效cookie数</p>
+                                <p id="cookie-expire"></p>
                             </div>
                         </div>
                         <div class="info-3">
@@ -47,8 +47,8 @@
                                 <img src="{{ url_for('static',filename='img/info-img-3.png') }}" alt="">
                             </div>
                             <div class="info-text fl">
-                                <p>活跃机器数(台)</p>
-                                <p>25</p>
+                                <p>企业名录队列</p>
+                                <p id="name-to-url"></p>
                             </div>
                         </div>
                         <div class="info-4">
@@ -56,14 +56,14 @@
                                 <img src="{{ url_for('static',filename='img/info-img-4.png') }}" alt="">
                             </div>
                             <div class="info-text fl">
-                                <p>今日活跃率(%)</p>
-                                <p>83</p>
+                                <p>关联接口队列</p>
+                                <p id="relationship"></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="top-bottom">
-                    <div class="title">类别统计</div>
+                    <div class="title">昨天抓取统计</div>
                     <img src="{{ url_for('static',filename='img/bj-1.png') }}" alt="" class="bj-1">
                     <img src="{{ url_for('static',filename='img/bj-2.png') }}" alt="" class="bj-2">
                     <img src="{{ url_for('static',filename='img/bj-3.png') }}" alt="" class="bj-3">
@@ -85,6 +85,7 @@
                 <p>数据抓取总量</p>
                 <div class="num">
                     <span>1</span>
+                    <span>0</span>
                     <span>,</span>
                     <span>0</span>
                     <span>0</span>
@@ -139,6 +140,7 @@
 <script src="{{ url_for('static',filename='js/echarts.min.js') }}"></script>
 <script src="{{ url_for('static',filename='js/china.js') }}"></script>
 <script src="{{ url_for('static',filename='js/echarts.js') }}"></script>
+<script src="{{ url_for('static',filename='js/echarts3.js') }}"></script>
 <script src="{{ url_for('static',filename='js/echarts1.js') }}"></script>
 <script src="{{ url_for('static',filename='js/echarts_number.js') }}"></script>
 </html>

@@ -20,7 +20,7 @@ $(document).ready(function(){
                 itemWidth: 10,
                 itemHeight: 10,
                 icon: 'rect',
-                data: ['name2url', '关联关系'],
+                data: ['name2url', '关联接口'],
                 textStyle: {
                     color: [],
                     fontStyle: 'normal',
@@ -87,7 +87,7 @@ $(document).ready(function(){
         //myChart.setOption(option);
       $.ajax({
            type: "GET",
-           url: "http://localhost:5000/test",
+           url: "http://localhost:5000/echarts1",
            dataType: "json",
            success: function(data){
                option['series'][0]['data'] = data['data']

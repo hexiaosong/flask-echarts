@@ -181,8 +181,8 @@ html,body{
     font-family: "LcdD";
     margin-top: 15px;
 }
-.data>.data-content>.con-center>.map-num span:nth-child(2),
-.data>.data-content>.con-center>.map-num span:nth-child(6){
+.data>.data-content>.con-center>.map-num span:nth-child(3),
+.data>.data-content>.con-center>.map-num span:nth-child(7){
     background-color: transparent;
     width: 30px;
 }
