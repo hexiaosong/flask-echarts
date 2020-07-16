@@ -3,6 +3,7 @@ $(document).ready(function(){
     function echarts_3() {
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('echarts_3'));
+        var linedata = [];
 
         option = {
 
@@ -118,27 +119,23 @@ $(document).ready(function(){
                     itemStyle: {
                         normal: {areaStyle: {type: 'default'}}
                     },
-                    data:[]
+                    data: linedata,
                 }
             ]
         };
 
-        // 使用刚指定的配置项和数据显示图表。
-        option['series'][0]['data'] = [900, 312, 321,754, 500, 830, 710, 521, 504, 660, 530, 410,710, 312, 321,754, 500, 830, 0, 0, 0, 0, 0, 0]
+        // 使用刚指定的配置项和数据显示图表
         myChart.setOption(option);
-//    $.ajax({
-//           type: "GET",
-//           url: "http://localhost:5000/echarts3",
-//           dataType: "json",
-//           success: function(data){
-//               alert(data["data"]);
-//               option['series'][0]['data'] = data["data"];
-//               alert(option['series'][0]['data'])
-//                // 为echarts对象加载数据
-//                myChart.setOption(option);
-//                alert("已经设定了选项")
-//           }
-//      });
+        $.ajax({
+           type: "GET",
+           url: "http://192.168.34.7:5000/echarts3",
+           dataType: "json",
+           success: function(data){
+                option['series'][0]['data'] = data['data']
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+           }
+      });
 
         window.addEventListener("resize",function(){
             myChart.resize();

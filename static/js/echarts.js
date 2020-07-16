@@ -13,7 +13,7 @@ $(function () {
         var data = []
         var geoCoordMap = {};
         var toolTipData = [];
-        var province = ['重庆', '四川', '贵州'];
+        var province = ['重庆', '四川', '贵州', '湖北'];
 
         /*获取地图数据*/
         myChart.showLoading();
@@ -28,9 +28,9 @@ $(function () {
 
         data = [{"name":"重庆", "value":50}, {"name":"贵州", "value":40}, {"name":"四川", "value":60}, {"name":"湖北", "value":55}]
         toolTipData = [{"name":"重庆", "value":[{"name":"企业数量", "value":'252万'}]},
-                       {"name":"四川", "value":[{"name":"企业数量", "value":'500万'}]},
-                       {"name":"贵州", "value":[{"name":"企业数量", "value":'250万'}]},
-                       {"name":"湖北", "value":[{"name":"企业数量", "value":'340万'}]},
+                       {"name":"四川", "value":[{"name":"企业数量", "value":'557万'}]},
+                       {"name":"贵州", "value":[{"name":"企业数量", "value":'351万'}]},
+                       {"name":"湖北", "value":[{"name":"企业数量", "value":'341万'}]},
         ]
         var max = 480,
             min = 9; // todo

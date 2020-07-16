@@ -3,9 +3,8 @@ $(document).ready(function(){
       function echarts_1() {
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('echarts_1'));
-        var data = [];
 
-        option = {
+        var option = {
             backgroundColor: 'rgba(0,0,0,0)',
             tooltip: {
                 trigger: 'item',
@@ -58,7 +57,7 @@ $(document).ready(function(){
                         }
                     }
                 },
-                data: data
+                data: []
             }, {
                 name: '',
                 type: 'pie',
@@ -79,7 +78,7 @@ $(document).ready(function(){
                         show: false,
                     }
                 },
-                data: data
+                data: []
             }]
         };
 
@@ -87,17 +86,16 @@ $(document).ready(function(){
         //myChart.setOption(option);
       $.ajax({
            type: "GET",
-           url: "http://localhost:5000/echarts1",
+           url: "http://192.168.34.7:5000/echarts1",
            dataType: "json",
-           success: function(data){
-               option['series'][0]['data'] = data['data']
+           success: function(piedata){
+               option['series'][0]['data'] = piedata['statistic']
+               option['series'][1]['data'] = piedata['statistic']
                 // 为echarts对象加载数据
                 myChart.setOption(option);
            }
       });
-
-
-        window.addEventListener("resize",function(){
+       window.addEventListener("resize",function(){
             myChart.resize();
         });
     }
