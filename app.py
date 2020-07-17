@@ -24,14 +24,14 @@ def yesterday_crawl_statistic():
 @app.route('/echarts3')
 def today_crawl_statistic():
     """今日抓取数据统计"""
-    result = [120, 232, 301, 434, 590, 630, 710, 882, 991, 1034, 1290, 1330, 0, 0, 0, 0,0,0,0,0,0,0,0,0]
+    result = get_line_statics()
     return jsonify({'data':result})
 
 
 @app.route('/number')
 def number():
     """redis队列统计"""
-    total_num = 10004567
+    total_num = get_relationship_total_num()
     conn = redis.Redis(host="123.234.5.241", port=12306, password="Cqjrdsjzx&2020", db=5)
     result = {
         'cookie_number': conn.llen("cookie"),

@@ -8,7 +8,7 @@ import pymongo
 
 client = pymongo.MongoClient('mongodb://192.168.34.124:27017/')
 
-myCol = client['prod']
+myCol = client['neo4j']
 def col_names():
     result = myCol.list_collection_names(session=None)
     return result
@@ -16,7 +16,7 @@ def col_names():
 
 coll_names = []
 for i in col_names():
-    if 'qcc_findRelationsDetail2020-06' in i:
+    if 'cq_api' in i:
         coll_names.append(i)
 
 print(coll_names)

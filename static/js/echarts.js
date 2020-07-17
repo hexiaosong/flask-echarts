@@ -52,9 +52,6 @@ $(function () {
         };
 
         option = {
-
-
-
             tooltip: {
                 trigger: 'item',
                 formatter: function(params) {
