@@ -47,7 +47,6 @@ def number():
         'num7': str(total_num)[6],
         'num8': str(total_num)[7],
     }
-    time.sleep(1)
     return jsonify(result)
 
 

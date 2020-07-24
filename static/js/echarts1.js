@@ -86,7 +86,7 @@ $(document).ready(function(){
         //myChart.setOption(option);
       $.ajax({
            type: "GET",
-           url: "http://192.168.34.7:5000/echarts1",
+           url: "http://192.168.34.10:5000/echarts1",
            dataType: "json",
            success: function(piedata){
                option['series'][0]['data'] = piedata['statistic']

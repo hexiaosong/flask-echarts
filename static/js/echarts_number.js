@@ -1,7 +1,7 @@
 $(document).ready(function(){
       $.ajax({
            type: "GET",
-           url: "http://192.168.34.7:5000/number",
+           url: "http://192.168.34.10:5000/number",
            dataType: "json",
            success: function(data){
                 document.getElementById("cookie-number").innerHTML = data["cookie_number"];

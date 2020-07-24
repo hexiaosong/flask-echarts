@@ -128,7 +128,7 @@ $(document).ready(function(){
         myChart.setOption(option);
         $.ajax({
            type: "GET",
-           url: "http://192.168.34.7:5000/echarts3",
+           url: "http://192.168.34.10:5000/echarts3",
            dataType: "json",
            success: function(data){
                 option['series'][0]['data'] = data['data']
